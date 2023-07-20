@@ -1,0 +1,18 @@
+.nav
+{
+    background-color: #5D3FD3 !important;
+}
+
+.button
+{
+    font-weight: 18px !important;
+    font-size: larger !important;
+    background-color: #5D3FD3 !important;
+}
+
+.button:hover
+{
+    /* color:rgb(226, 235, 218) !important; */
+    color:black !important;
+    /* background-color: white !important; */
+}

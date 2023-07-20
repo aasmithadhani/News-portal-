@@ -11,7 +11,7 @@ import Grid from '@mui/material/Grid';
 import Pagination from './Pagination'
 import { Link} from 'react-router-dom';
 
-
+import './card.css'
 import Navigation from './Navigation'
 
 
@@ -27,6 +27,7 @@ const Test=(props)=>
   {
       axios.get('https://saurav.tech/NewsAPI/top-headlines/category/health/in.json')
       .then(res=>SetMyData(res.data.articles))
+    .then(res=>console.log(res.data));
   },[])
 
 
@@ -41,8 +42,9 @@ const Test=(props)=>
     return(
         <div>
             <Navigation/>
-           <h1 className='heading'>The Wall Street Journal</h1>
-            <Grid container spacing={2}>
+            
+            <Grid container spacing={2} sx={{mt:5}}>
+           
                
                 {
                     items.length==0?
@@ -51,9 +53,9 @@ const Test=(props)=>
                     items.map((values)=>
                         (
                             <>
-                            
+                           
                             <Grid item xs={12} md={6} lg={3}>
-                            <Card style={{width:"300px",height:"500px"}} sx={{ maxWidth: 346}}>
+                            <Card style={{width:"280px",height:"550px"}} sx={{ maxWidth: 346}} className='card'>
                                 <CardMedia
                                 component="img"
                                 alt="green iguana"
